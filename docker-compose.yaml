@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  malware_analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /tmp:/tmp:ro,nexec
+    network_mode: none
+
